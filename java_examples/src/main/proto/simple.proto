@@ -1,7 +1,0 @@
-syntax = "proto3";
-
-package example.simple;
-
-message SimpleMessage {
-  string text = 1;
-}
