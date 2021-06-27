@@ -1,6 +1,5 @@
 syntax = "proto3";
-option go_package = "github.com/pranjalsaxena10/gRPC-protobuf/protobuf/golang_examples; simplepb";
-
+option go_package = "github.com/pranjalsaxena10/gRPC-protobuf/protobuf/golang_examples;protob";
 
 message SimpleMessage {
     int32 id = 1;

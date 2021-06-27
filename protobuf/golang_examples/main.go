@@ -4,7 +4,6 @@ import (
 	"io/ioutil"
 	"log"
 	"github.com/spf13/pflag"
-
 	"github.com/pranjalsaxena10/gRPC-protobuf/protobuf/golang_examples/generated"
 	"google.golang.org/protobuf/proto"
 )
@@ -24,7 +23,7 @@ func SimpleMessageReadWriteFromFile(fileName string) {
 	readFromFile(fileName, simpleMessage)
 }
 
-func readFromFile(fileName string, simpleMessage *simplepb.SimpleMessage) {
+func readFromFile(fileName string, simpleMessage *protob.SimpleMessage) {
 	log.Print("readFromFile started...")
 	
 	data, err := ioutil.ReadFile(fileName)
@@ -40,7 +39,7 @@ func readFromFile(fileName string, simpleMessage *simplepb.SimpleMessage) {
 	log.Printf("Reading from file is successful. Proto: %+v", simpleMessage)
 }
 
-func writeToFile(fileName string, simpleMessage *simplepb.SimpleMessage) {
+func writeToFile(fileName string, simpleMessage *protob.SimpleMessage) {
 	log.Print("writeToFile started...")
 
 	protoData, err := proto.Marshal(simpleMessage)
@@ -60,8 +59,8 @@ func writeToFile(fileName string, simpleMessage *simplepb.SimpleMessage) {
 
 
 
-func createSimpleMessageStruct() *simplepb.SimpleMessage{
-	value := simplepb.SimpleMessage{
+func createSimpleMessageStruct() *protob.SimpleMessage{
+	value := protob.SimpleMessage{
 		Id:          456,
 		IsPresent:   true,
 		MessageName: "message from proto",
