@@ -1,24 +1,17 @@
 # Protobuf:
-This is a sample project related to GoLang working of protobuf where:
+## This is a sample project related to GoLang working of protobuf where:
 1. You can add your Google Protobuf files
 2. Create GoLang struct for protobuf files
 3. Serialize them in binary files
 4. Read binary files
 5. Convert them back to Protobuf Message
 
------
-
-How to use this project:
+## How to use this project:
 go run main.go --protobufName name_of_your_protomessage --file name_of_binary_file
-
------
-
 Example: 
 go run main.go --protobufName EnumMessage --file EnumMessage.bin
 
------
-
-Steps to add new protofiles to this project:
+## Steps to add new protofiles to this project:
 1. Create your protobuf file like simple.proto following google protobuf syntax
 2. Put it inside directory gRPC-protobuf/protobuf/golang_examples/src/protos
 3. Run command "make build". This will compile newly added proto files inside dir "generated"
