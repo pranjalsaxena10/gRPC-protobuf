@@ -20,7 +20,7 @@ go run main.go --protobufName EnumMessage --file EnumMessage.bin
 
 Steps to add new protofiles to this project:
 1. Create your protobuf file like simple.proto following google protobuf syntax
-2. Put it inside directory src/protos
+2. Put it inside directory gRPC-protobuf/protobuf/golang_examples/src/protos
 3. Run command "make build". This will compile newly added proto files inside dir "generated"
 4. Add corresponding struct creation code like:
     This is for a proto file like:
