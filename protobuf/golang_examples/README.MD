@@ -23,6 +23,7 @@ Steps to add new protofiles to this project:
 3. Run command "make build". This will compile newly added proto files inside dir "generated"
 4. Add corresponding struct creation code like:
     This is for a proto file like:
+    ```
         syntax = "proto3";
         option go_package = "github.com/pranjalsaxena10/gRPC-protobuf/protobuf/golang_examples;protob";
 
@@ -32,7 +33,9 @@ Steps to add new protofiles to this project:
             string messageName = 3;
             repeated int32 list = 4;
         }
+    ```
     Struct creation:
+    ```
         func createSimpleMessageStruct() *protob.SimpleMessage{
             simpleMessageProto := protob.SimpleMessage{
                 Id:          456,
@@ -42,6 +45,7 @@ Steps to add new protofiles to this project:
             }
             return &simpleMessageProto
         }
+    ```
 
 5. Add corresponding update in createStruct(), readFromFile() and writeFromFile() methods for switch case
 6. Once all this is done you can happily use
