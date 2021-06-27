@@ -7,9 +7,13 @@
 5. Convert them back to Protobuf Message
 
 ### How to use this project:
+```
 go run main.go --protobufName name_of_your_protomessage --file name_of_binary_file
+```
 Example: 
+```
 go run main.go --protobufName EnumMessage --file EnumMessage.bin
+```
 
 ### Steps to add new protofiles to this project:
 1. Create your protobuf file like simple.proto following google protobuf syntax
